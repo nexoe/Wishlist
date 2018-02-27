@@ -772,6 +772,11 @@ $(document).ready(function () {
   $("button.delete").on('click', function () {
     $(this).parent().hide();
   });
+
+  $("div.tabs > ul > li").on('click', function () {
+    $(this).parent().children('li').removeClass('is-active');
+    $(this).addClass('is-active');
+  });
 });
 
 /***/ }),
