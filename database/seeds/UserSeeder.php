@@ -13,7 +13,6 @@ class UserSeeder extends Seeder
     {
       $user = new \App\User();
       $user->email = 'rasmusnexoe@gmail.com';
-      $user->name = 'Rasmus';
       $user->password = \Hash::make('test1234');
       $user->save();
     }
