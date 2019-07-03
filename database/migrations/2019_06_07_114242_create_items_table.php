@@ -16,6 +16,15 @@ class CreateItemsTable extends Migration
         Schema::create('items', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+            $table->string('name', 64);
+            $table->string('description');
+            $table->string('image');
+            $table->string('link');
+            $table->integer('wishlist_id')->unsigned();
+        });
+
+        Schema::table('items', function(Blueprint $table){
+            $table->foreign('wishlist_id')->references('id')->on('wishlists')->onDelete('cascade');
         });
     }
 
