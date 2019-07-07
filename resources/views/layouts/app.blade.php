@@ -8,16 +8,20 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ _i('Wishlist')}}</title>
+    <title>Wyshlist </title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <style>
+
+    </style>
 </head>
 <body>
   <nav class="navbar is-fixed-top is-dark" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="#">
-      <h4 class="is-size-4 has-text-primary">{{_i('Wishlist')}}</h4>
+      <h4 class="is-size-4 has-text-primary">Wyshlist</h4>
     </a>
 
     <div class="navbar-burger">

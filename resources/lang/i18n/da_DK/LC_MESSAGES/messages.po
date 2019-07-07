@@ -1,19 +1,143 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MultilanguageLaravelApplication\n"
-"POT-Creation-Date: 2018-02-26 15:54+0000\n"
-"PO-Revision-Date: 2018-02-26 15:54+0000\n"
+"POT-Creation-Date: 2019-07-05 12:56+0200\n"
+"PO-Revision-Date: 2019-07-05 12:59+0200\n"
 "Last-Translator: James Translator <james@translations.colm>\n"
 "Language-Team: James Translator <james@translations.colm>\n"
 "Language: da_DK\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 2.2.1\n"
 "X-Poedit-KeywordsList: _;__;_i;_s;gettext;_n:1,2;ngettext:1,2;dgettext:2\n"
 "X-Poedit-Basepath: ../../../../../app\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: Http\n"
 "X-Poedit-SearchPath-1: ../resources/views\n"
 "X-Poedit-SearchPath-2: Console\n"
-"X-Poedit-SearchPath-3: ../storage/framework/messages/\n"
+"X-Poedit-SearchPath-3: ../storage/framework/messages\n"
+
+#: ../storage/framework/messages/018262fdfa16b6f3902d081b0492dab0893c57fa.php.php:6
+#: ../storage/framework/messages/eca68ded25b4e1c81661fd5baf8edb0dc630e0cf.php.php:41
+msgid "Create new user"
+msgstr "Opret ny bruger"
+
+#: ../storage/framework/messages/018262fdfa16b6f3902d081b0492dab0893c57fa.php.php:12
+#: ../storage/framework/messages/eca68ded25b4e1c81661fd5baf8edb0dc630e0cf.php.php:20
+msgid "Email"
+msgstr "Email"
+
+#: ../storage/framework/messages/018262fdfa16b6f3902d081b0492dab0893c57fa.php.php:22
+#: ../storage/framework/messages/eca68ded25b4e1c81661fd5baf8edb0dc630e0cf.php.php:30
+msgid "Password"
+msgstr "Kode"
+
+#: ../storage/framework/messages/018262fdfa16b6f3902d081b0492dab0893c57fa.php.php:32
+msgid "Repeat password"
+msgstr "Gentag kode"
+
+#: ../storage/framework/messages/018262fdfa16b6f3902d081b0492dab0893c57fa.php.php:41
+msgid "Create"
+msgstr "Opret ny"
+
+#: ../storage/framework/messages/5471fdb80ee0057971de84e69eef530149e924bc.php.php:56
+#: Http/Controllers/Auth/RegisterController.php:56
+msgid "No email supplied"
+msgstr "Ingen email angivet"
+
+#: ../storage/framework/messages/5471fdb80ee0057971de84e69eef530149e924bc.php.php:57
+#: Http/Controllers/Auth/RegisterController.php:57
+msgid "Email already in use"
+msgstr "Email allerede i brug"
+
+#: ../storage/framework/messages/5471fdb80ee0057971de84e69eef530149e924bc.php.php:58
+#: Http/Controllers/Auth/RegisterController.php:58
+msgid "No password supplied"
+msgstr "Ingen kode angivet"
+
+#: ../storage/framework/messages/5471fdb80ee0057971de84e69eef530149e924bc.php.php:59
+#: Http/Controllers/Auth/RegisterController.php:59
+msgid "Passwords doesn't match"
+msgstr "Koderne matcher ikke"
+
+#: ../storage/framework/messages/5471fdb80ee0057971de84e69eef530149e924bc.php.php:60
+#: Http/Controllers/Auth/RegisterController.php:60
+msgid "The password must be at least 8 characters."
+msgstr "Koden skal være mindst 8 tegn lang."
+
+#: ../storage/framework/messages/7956de339148ad62a84090d3d1bb2313dc0284b8.php.php:11
+#: ../storage/framework/messages/9a33b8edd47ea8d801758ed20506144a4a773400.php.php:11
+#: ../storage/framework/messages/9a33b8edd47ea8d801758ed20506144a4a773400.php.php:20
+msgid "Wishlist"
+msgstr "Ønskeliste"
+
+#: ../storage/framework/messages/7956de339148ad62a84090d3d1bb2313dc0284b8.php.php:21
+msgid "Create new wishlist"
+msgstr "Opret ny ønskeliste"
+
+#: ../storage/framework/messages/7956de339148ad62a84090d3d1bb2313dc0284b8.php.php:28
+msgid "Name"
+msgstr "Navn"
+
+#: ../storage/framework/messages/7956de339148ad62a84090d3d1bb2313dc0284b8.php.php:30
+msgid "What do you want to call this wishlist?"
+msgstr "Hvad skal ønskelisten hedde?"
+
+#: ../storage/framework/messages/7956de339148ad62a84090d3d1bb2313dc0284b8.php.php:35
+msgid "Description"
+msgstr "Beskrivelse"
+
+#: ../storage/framework/messages/7956de339148ad62a84090d3d1bb2313dc0284b8.php.php:37
+msgid "Write a description for this wishlist"
+msgstr "Skriv en beskrivelse af ønskelisten"
+
+#: ../storage/framework/messages/7956de339148ad62a84090d3d1bb2313dc0284b8.php.php:42
+msgid "Privacy"
+msgstr "Skal ønskelisten være privat?"
+
+#: ../storage/framework/messages/7956de339148ad62a84090d3d1bb2313dc0284b8.php.php:46
+msgid "Private"
+msgstr "Privat"
+
+#: ../storage/framework/messages/7956de339148ad62a84090d3d1bb2313dc0284b8.php.php:47
+msgid "Public"
+msgstr "Offentlig"
+
+#: ../storage/framework/messages/9a33b8edd47ea8d801758ed20506144a4a773400.php.php:39
+msgid "Your Profile"
+msgstr "Din profil"
+
+#: ../storage/framework/messages/9a33b8edd47ea8d801758ed20506144a4a773400.php.php:41
+msgid "Logout"
+msgstr "Log ud"
+
+#: ../storage/framework/messages/e2e31871f3367ba937849ec020230c7f8859fdc4.php.php:10
+msgid "My wishlists"
+msgstr "Mine ønskelister"
+
+#: ../storage/framework/messages/e2e31871f3367ba937849ec020230c7f8859fdc4.php.php:17
+msgid "Profile"
+msgstr "Profil"
+
+#: ../storage/framework/messages/e2e31871f3367ba937849ec020230c7f8859fdc4.php.php:24
+msgid "Shared with me"
+msgstr "Delt med mig"
+
+#: ../storage/framework/messages/eca68ded25b4e1c81661fd5baf8edb0dc630e0cf.php.php:14
+#: ../storage/framework/messages/eca68ded25b4e1c81661fd5baf8edb0dc630e0cf.php.php:39
+#: ../storage/framework/messages/fb8f5879137878e3fc423f78c8120ea5545e78be.php.php:31
+msgid "Login"
+msgstr "Log ind"
+
+#: ../storage/framework/messages/eca68ded25b4e1c81661fd5baf8edb0dc630e0cf.php.php:42
+msgid "Forgot password?"
+msgstr "Glemt kode?"
+
+#: ../storage/framework/messages/fb8f5879137878e3fc423f78c8120ea5545e78be.php.php:29
+msgid "Home"
+msgstr "Hjem"
+
+#: ../storage/framework/messages/fb8f5879137878e3fc423f78c8120ea5545e78be.php.php:32
+msgid "Register"
+msgstr "Opret ny bruger"

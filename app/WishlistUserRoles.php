@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class wishlists extends Model
+class WishlistUserRoles extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -12,7 +12,8 @@ class wishlists extends Model
      * @var array
      */
     protected $fillable = [
-        '',
-        'password',
+        'wishlist_id',
+        'user_id',
+        'role'
     ];
 }

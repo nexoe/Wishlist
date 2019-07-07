@@ -24,11 +24,12 @@ background: linear-gradient(to right, #78ffd6, #007991); /* W3C, IE 10+/ Edge, F
     <div class="hero-body">
       <div class="container has-text-centered">
         <div class="column is-6 is-offset-3">
-          <h1 class="title is-size-1">Wishlist</h1>
+          <h1 class="title is-size-1">Wyshlist</h1>
           @if(Auth::check())
             <a class="subtitle" href="{{Route('home')}}">{{_i('Home')}}</a>
           @else
           <a class="subtitle" href="{{Route('login')}}">{{_i('Login')}}</a>
+          <span>|</span>
           <a class="subtitle" href="{{Route('register')}}">{{_i('Register')}}</a>
           @endif
         </div>

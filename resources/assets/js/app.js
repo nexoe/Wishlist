@@ -9,6 +9,7 @@ require('./bootstrap');
 
 $(document).ready(function(){
 
+    // General stuff
   $(".navbar-burger").on('click', function(){
     $(".navbar-burger").toggleClass('is-active');
     $(".navbar-menu").toggleClass('is-active');
@@ -22,4 +23,19 @@ $(document).ready(function(){
     $(this).parent().children('li').removeClass('is-active');
     $(this).addClass('is-active');
   });
+
+  $(".modal-close").click(function(){
+    $(this).parent().toggleClass('is-active');
+  });
+
+  $(".modal-background").click(function(){
+    $(this).parent().toggleClass('is-active');
+  });
+
+
+  // Specific stuff
+  $("#newWishlistBtn").click(function(){
+    $('#newWishlistModal').toggleClass('is-active');
+  });
+
 })

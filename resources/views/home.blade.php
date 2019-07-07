@@ -29,7 +29,9 @@
 
       <div class="box" id="tabs-content">
         <div id="my_wishlists_box">
-          My wishlists
+            @component('pages/wishlist')
+
+            @endcomponent
         </div>
 
         <div id="profile_box">
