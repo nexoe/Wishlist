@@ -29,14 +29,16 @@
 
       <div class="box" id="tabs-content">
         <div id="my_wishlists_box">
-          My wishlists
+            @component('pages/wishlists/wishlist')
+
+            @endcomponent
         </div>
 
-        <div id="profile_box">
+        <div id="profile_box" display="none">
           profile
         </div>
 
-        <div id="shared_with_me_box">
+        <div id="shared_with_me_box" display="none">
           shared with me
         </div>
       </div>
