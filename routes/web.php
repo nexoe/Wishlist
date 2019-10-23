@@ -20,6 +20,17 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/logout', ['as' => 'logout', 'uses' => 'Auth\LoginController@logout']);
 
-Route::get('wishlist/create', 'WishlistController@create');
+
+Route::prefix('wishlist')->group(function(){
+  Route::post('create', 'WishlistController@store');
+  Route::get('my_wishlists', 'WishlistController@index');
+  Route::get('show', 'WishlistController@show');
+  Route::put('update', 'WishlistController@update');
+  Route::delete('delete', 'WishlistController@destroy');
+});
+
+
+
+
 
 

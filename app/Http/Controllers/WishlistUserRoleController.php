@@ -38,7 +38,7 @@ class WishlistUserRoleController extends Controller
         $WishlistUserRole->user_id = $user_id;
         $WishlistUserRole->role = $role;
 
-        $WishlistUserRole->save;
+        $WishlistUserRole->save();
     }
 
     /**

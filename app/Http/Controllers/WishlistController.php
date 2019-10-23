@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Wishlist;
+use App\WishlistUserRoles;
 use App\Http\Controllers\WishlistUserRoleController;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Collection;
 
 class WishlistController extends Controller
 {
@@ -15,7 +18,16 @@ class WishlistController extends Controller
      */
     public function index()
     {
-        //
+        $wishlistsForUser = WishlistUserRoles::where('user_id', Auth::id())->get();
+
+        $wishlists = collect([]);
+
+        $wishlistsForUser->each(function($item, $key) use($wishlists) {
+          $wishlists->push(Wishlist::find($item->wishlist_id));
+        });
+
+        return $wishlists;
+
     }
 
     /**
@@ -29,25 +41,24 @@ class WishlistController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Save a new wishlist with the currently logged in user as owner
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
         $wishlist = new Wishlist;
-
         $wishlist->name = $request->name;
-        $wishlist->desciption = $request->desciption;
+        $wishlist->description = $request->description;
         $wishlist->isPublic = $request->isPublic;
-
-        $wishlist->save;
+        $wishlist->save();
 
         $userId = Auth::id();
+        $wurc = new WishlistUserRoleController;
+        $wurc->store($wishlist->id, $userId, 'owner');
 
-        WishlistUserRoleController::store($wishlist->id, $userId, 'owner');
+        return redirect()->back();
     }
 
     /**

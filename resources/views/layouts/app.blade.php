@@ -18,13 +18,14 @@
     </style>
 </head>
 <body>
+<div id="app">
   <nav class="navbar is-fixed-top is-dark" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="#">
       <h4 class="is-size-4 has-text-primary">Wyshlist</h4>
     </a>
 
-    <div class="navbar-burger">
+    <div class="navbar-burger" v-on:click="openMenu">
       <span></span>
       <span></span>
       <span></span>
@@ -47,12 +48,9 @@
       @endif
     </div>
   </div>
-
-
 </nav>
         @yield('content')
-    </div>
-
+      </div>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     @yield('script')

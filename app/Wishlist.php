@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Wishlist extends Model
 {
+    protected $primary_key = 'id';
+
     /**
      * The attributes that are mass assignable.
      *
@@ -16,4 +18,8 @@ class Wishlist extends Model
         'description',
         'isPublic'
     ];
+
+    public function items() {
+      return $this->hasMany(Item::class);
+    }
 }
