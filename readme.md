@@ -3,7 +3,7 @@
 <h2>About</h2>
 <p>
 This is a part time project, trying to build an application to handle wishlists online,</br> and allow to share them with familiy and friends.
-</br>This is supposed to be build in Laravel, with Bulma as the styling framework
+</br>This is supposed to be build in Laravel, with Bulma as the styling framework, and Vue.js.
 </p>
 
 <a href="https://bulma.io">
