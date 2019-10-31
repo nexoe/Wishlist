@@ -7,7 +7,7 @@
     </div>
 
     <div class="card-content">
-        <form action="{{url('wis  hlist/create')}}" method="post" >
+        <form action="{{url('wishlist/create')}}" method="post" >
         @csrf <!-- {{ csrf_field() }} -->
             <div class="field">
                 <label for="Name">{{_i('Name')}}</label>
