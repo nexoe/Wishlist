@@ -13,44 +13,12 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    <style>
-
-    </style>
 </head>
 <body>
-<div id="app">
-  <nav class="navbar is-fixed-top is-dark" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="#">
-      <h4 class="is-size-4 has-text-primary">Wyshlist</h4>
-    </a>
-
-    <div class="navbar-burger" v-on:click="openMenu">
-      <span></span>
-      <span></span>
-      <span></span>
+    <div id="app">
+    <navbar @if(Auth::check()) email="{{Auth::user()->email}}" @endif is_logged_in="{{Auth::check()}}" home_url="{{Route('home')}}" logout_url="{{Route('logout')}}"></navbar>
+    @yield('content')
     </div>
-
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-end">
-      @if(Auth::check())
-        <div class="navbar-item has-dropdown is-hoverable">
-          <div class="navbar-link">
-            {{Auth::user()->email}}
-          </div>
-          <div class="navbar-dropdown">
-            <a class="navbar-item" href="{{Route('home')}}"><i class="fa fa-user"></i> {{_i('Your Profile')}}</a>
-            <span class="navbar-divider"></span>
-            <a class="navbar-item" href="{{Route('logout')}}"><i class="fa fa-sign-out"></i> {{_i('Logout')}}</a>
-          </div>
-        </div>
-      @endif
-    </div>
-  </div>
-</nav>
-        @yield('content')
-      </div>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     @yield('script')
