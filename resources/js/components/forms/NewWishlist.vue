@@ -8,7 +8,6 @@
 
     <div class="card-content">
         <form action="/wishlist/create" method="post" >
-        <!-- {{ csrf_field() }} -->
             <div class="field">
                 <label for="Name">Name</label>
                 <div class="control">
