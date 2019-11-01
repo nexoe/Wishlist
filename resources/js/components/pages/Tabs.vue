@@ -47,11 +47,8 @@
 
 <script>
 import wishlists from './Wishlists';
-<<<<<<< HEAD
 import profile from './Profile';
 import shared_with_me from './SharedWithMe';
-=======
->>>>>>> master
 
 export default {
   name: 'tabs',
@@ -85,11 +82,8 @@ export default {
   },
   components: {
     wishlists,
-<<<<<<< HEAD
     profile,
     shared_with_me
-=======
->>>>>>> master
   }
 }
 </script>
