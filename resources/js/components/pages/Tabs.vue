@@ -31,11 +31,11 @@
         </div>
 
         <div id="profile_box" v-show="profile_active">
-            <profile></profile>
+          profile
         </div>
 
         <div id="shared_with_me_box" v-show="shared_active">
-            <shared_with_me></shared_with_me>
+          shared with me
         </div>
       </div>
 
@@ -47,8 +47,11 @@
 
 <script>
 import wishlists from './Wishlists';
+<<<<<<< HEAD
 import profile from './Profile';
 import shared_with_me from './SharedWithMe';
+=======
+>>>>>>> master
 
 export default {
   name: 'tabs',
@@ -82,8 +85,11 @@ export default {
   },
   components: {
     wishlists,
+<<<<<<< HEAD
     profile,
     shared_with_me
+=======
+>>>>>>> master
   }
 }
 </script>
