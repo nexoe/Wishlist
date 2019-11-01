@@ -47,6 +47,8 @@
 
 <script>
 import wishlists from './Wishlists';
+import profile from './Profile';
+import shared_with_me from './SharedWithMe';
 
 export default {
   name: 'tabs',
@@ -80,6 +82,8 @@ export default {
   },
   components: {
     wishlists,
+    profile,
+    shared_with_me
   }
 }
 </script>
