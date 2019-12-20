@@ -44,7 +44,7 @@ export default {
     this.modalClose();
   },
   components: {
-    new_wishlist_form
+    new_wishlist_form,
   }
 }
 </script>

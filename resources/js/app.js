@@ -1,26 +1,64 @@
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
-
 require('./dependencies');
 
-window.Vue = require('vue');
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import Vuex from 'vuex';
+import Axios from 'axios';
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+console.log(VueRouter);
 
-// Vue.component('navbar', require('./components/Navbar.vue'));
-import navbar from "./components/Navbar";
-import wishlists from "./components/pages/Wishlists";
-import tabs from "./components/pages/Tabs";
+// Components
+import Navbar from "./components/Navbar";
+import Wishlists from "./components/pages/Wishlists";
+import Tabs from "./components/pages/Tabs";
+import Profile from "./components/pages/Profile";
 
+Vue.use(Vuex);
+Vue.use(VueRouter);
+
+// VueRouter
+const router =  new VueRouter ({
+  routes: [
+    {
+      path: '/',
+      name: 'frontpage',
+      component: Tabs
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: Profile
+    }
+  ]
+})
+
+
+// Vuex
+const store = new Vuex.Store({
+  state: {
+    email: '',
+  },
+  mutations: {
+    set_email(state, new_email) {
+      state.email = new_email;
+    }
+  },
+  actions: {
+    set_email(context, new_email) {
+      context.commit('set_email', new_email)
+    }
+  },
+  getters: {
+    email: state => {
+      return state.email
+    }
+  }
+});
+
+// Vue
 const app = new Vue({
-    el: '#app',
+    store,
+    router,
     methods: {
       hideParent: function() {
         $(this).parent().hide();
@@ -31,8 +69,13 @@ const app = new Vue({
       },
     },
     components: {
-      navbar,
-      wishlists,
-      tabs,
+      Navbar,
+      Wishlists,
+      Tabs
+    },
+    mounted() {
+      // Get user email
+      Axios.get('/user/email').then(response => (this.$store.dispatch('set_email', response.data)))
     }
-});
+}).$mount('#app');
+

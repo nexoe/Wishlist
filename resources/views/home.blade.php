@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<tabs></tabs>
+<router-view></router-view>
 @endsection
 
 @section('script')

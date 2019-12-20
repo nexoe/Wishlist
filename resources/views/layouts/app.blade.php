@@ -16,7 +16,7 @@
 </head>
 <body>
     <div id="app">
-    <navbar @if(Auth::check()) email="{{Auth::user()->email}}" @endif is_logged_in="{{Auth::check()}}" home_url="{{Route('home')}}" logout_url="{{Route('logout')}}"></navbar>
+    <navbar is_logged_in="{{Auth::check()}}" home_url="{{Route('home')}}" logout_url="{{Route('logout')}}"></navbar>
     @yield('content')
     </div>
     <!-- Scripts -->

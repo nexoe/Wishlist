@@ -10,12 +10,7 @@
                 My wishlists
             </a>
           </li>
-          <li id="profile" v-bind:class="{'is-active': profile_active}" v-on:click="activateProfile">
-            <a>
-              <span class="icon is-small"><i class="fa fa-user"></i></span>
-                Profile
-            </a>
-          </li>
+
           <li id="shared_with_me" v-bind:class="{'is-active': shared_active}" v-on:click="activateShared">
             <a>
               <span class="icon is-small"><i class="fa fa-list"></i></span>
@@ -30,9 +25,7 @@
             <wishlists></wishlists>
         </div>
 
-        <div id="profile_box" v-show="profile_active">
-          profile
-        </div>
+
 
         <div id="shared_with_me_box" v-show="shared_active">
           shared with me
