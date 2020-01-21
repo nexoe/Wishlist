@@ -1,22 +1,22 @@
 <template>
 <div id="wishlists">
-<div class="column">
-    <div class="is-centered">
-        <button v-on:click='modalOpen' class="button">Create new wishlist</button>
-    </div>
-
   <div class="column">
+      <div class="is-centered">
+          <button v-on:click='modalOpen' class="button">Create new wishlist</button>
+      </div>
 
-  </div>
-</div>
+    <div class="column">
 
-<div class="modal" v-bind:class="{'is-active': is_active}">
-  <div class="modal-background" v-on:click="modalClose"></div>
-  <div class="modal-content">
-    <new_wishlist_form></new_wishlist_form>>
+    </div>
   </div>
-  <button class="modal-close is-large" aria-label="close" v-on:click="modalClose"></button>
-</div>
+
+  <div class="modal" v-bind:class="{'is-active': is_active}">
+    <div class="modal-background" v-on:click="modalClose"></div>
+    <div class="modal-content">
+      <new_wishlist_form></new_wishlist_form>>
+    </div>
+    <button class="modal-close is-large" aria-label="close" v-on:click="modalClose"></button>
+  </div>
 </div>
 </template>
 
@@ -30,6 +30,7 @@ export default {
   data() {
     return {
       is_active: 'false',
+      wishlists: []
     }
   },
   methods: {
@@ -45,6 +46,11 @@ export default {
   },
   components: {
     new_wishlist_form,
+  },
+  computed: {
+    wishlists () {
+      return Axios.get('wishlist/user').then(this.wishlists = response );
+    }
   }
 }
 </script>
